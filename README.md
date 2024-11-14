@@ -12,6 +12,8 @@ This case study explores the [topic of analysis] to address key questions and pr
 - [Future Work](#future-work)
 - [References and Acknowledgements](#references-and-acknowledgements)
   
+## Overview
+In the context of this analysis, the data model is an abstraction that describes how different data elements are structured and relate to each other within the customer support operations. Specifically, the data model involves:
 
 ### Installation
 Clone this repository and install the dependencies:
