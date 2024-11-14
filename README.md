@@ -8,7 +8,7 @@ This case study explores the [topic of analysis] to address key questions and pr
 - [Optimising resolution window data and Methodology](#optimising-resolution-window-data-and-methodology)
 - [Channel Transition Analysis](#channel-transition-analysis)
 - [Resolution Success Channel](#resolution-success-channel)
-- - [How to Use This Repository](#how-to-use-this-repository)
+- [How to Use This Repository](#how-to-use-this-repository)
   
 ## Overview
 In the context of this analysis, the data model is an abstraction that describes how different data elements are structured and relate to each other within the customer support operations. Specifically, the data model involves:
