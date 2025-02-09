@@ -16,25 +16,35 @@ In the context of this analysis, the data model is an abstraction that describes
 ## Optimising resolution window data and Methodology
 
 Objective
-The primary goal of this analysis is to determine an optimal resolution window by examining the frequency of repeat contacts and calculating first-contact resolution rates. Specifically, we aim to:
-Identify non-first contact resolution cases with a focus on follow-up contact intervals within 5 and 7 days.
+This project analyzes and optimizes the customer support resolution timeframe at SumUp. The goal is to improve efficiency by adjusting the current 7-day resolution window based on real data, ensuring better customer experience and operational effectiveness.
+
 Calculate first-contact resolution cases, where there is no preceding or following contact within the specified window (5 or 7 days).
 Provide statistical insights, including average and median days between contacts, to inform the optimal resolution timeframe.
 Methodology
 Step 1: Data Preparation
 Extract raw data, converting timestamps into a compatible format for date calculations.
-Organise each merchant’s interactions by timestamp, identifying previous (PREV_CONTACT_DATE) and subsequent contacts (NEXT_CONTACT_DATE) using SQL window functions.
-Step 2: Define Contact Intervals
-Calculate DAYS_SINCE_LAST_CONTACT and DAYS_TO_NEXT_CONTACT for each interaction to understand the time gaps between consecutive interactions.
-Step 3: Categorise Contact Resolution Types
-Classify each contact based on the intervals between contacts:
-Non-First Contact Resolution: A contact with a follow-up interaction within either 5 or 7 days, indicating that the issue required additional engagement.
-First Contact Resolution: A contact with no follow-up within either 5 or 7 days, signaling that the issue was resolved upon the initial engagement.
-Step 4: Calculate Resolution Statistics For each contact type, calculate:
-Average and Median Days Between Contacts: Statistical metrics to observe typical intervals between follow-up contacts in non-first contact resolution cases.
-Counts and Percentages:
-Non-first contact resolutions within 5 and 7 days (count and percentage of total).
-First-contact resolutions within 5 and 7 days (count and percentage of total).
+Calculating total resoulution time
+Calculating a completion_time, which is the expected resolution timestamp by adding the total resolution time to CREATED_AT.
+
+Step 2: Identifying Cases Within a 7-Day Window
+Calculating the case with a 7 day window 
+
+Step 3: Determining the First and Last Contact
+Finds the earliest (MIN) and latest (MAX) contact time within a 7-day window per MERCHANT_ID and REASON.
+Finds the earliest (MIN) and latest (MAX) contact time within a 7-day window per MERCHANT_ID and REASON.
+Finds the earliest (MIN) and latest (MAX) contact time within a 7-day window per MERCHANT_ID and REASON.
+
+Step 4: Computing Resolution Time and Aggregating reults
+Computes the average resolution time in seconds.
+
+🔍 Key Findings
+Current First Contact Resolution (FCR) Rate: 68.8%
+
+Average Resolution Time: 4.36 days
+
+Recommended New Resolution Window: 5 days
+
+Impact: Expected to increase FCR to 71.6%, improving customer experience.
 
 
 ## Channel Transition Analysis
