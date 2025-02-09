@@ -10,7 +10,7 @@ This case study explores the [topic of analysis] to address key questions and pr
 - [Resolution Success Channel](#resolution-success-channel)
 - [How to Use This Repository](#how-to-use-this-repository)
   
-## Overview
+## 📌 Overview
 In the context of this analysis, the data model is an abstraction that describes how different data elements are structured and relate to each other within the customer support operations. Specifically, the data model involves:
 
 ## Optimising resolution window data and Methodology
@@ -18,9 +18,10 @@ In the context of this analysis, the data model is an abstraction that describes
 Objective
 This project analyzes and optimizes the customer support resolution timeframe at SumUp. The goal is to improve efficiency by adjusting the current 7-day resolution window based on real data, ensuring better customer experience and operational effectiveness.
 
-Calculate first-contact resolution cases, where there is no preceding or following contact within the specified window (5 or 7 days).
 Provide statistical insights, including average and median days between contacts, to inform the optimal resolution timeframe.
-Methodology
+
+📂 Methodology
+
 Step 1: Data Preparation
 Extract raw data, converting timestamps into a compatible format for date calculations.
 Calculating total resoulution time
@@ -30,8 +31,6 @@ Step 2: Identifying Cases Within a 7-Day Window
 Calculating the case with a 7 day window 
 
 Step 3: Determining the First and Last Contact
-Finds the earliest (MIN) and latest (MAX) contact time within a 7-day window per MERCHANT_ID and REASON.
-Finds the earliest (MIN) and latest (MAX) contact time within a 7-day window per MERCHANT_ID and REASON.
 Finds the earliest (MIN) and latest (MAX) contact time within a 7-day window per MERCHANT_ID and REASON.
 
 Step 4: Computing Resolution Time and Aggregating reults
